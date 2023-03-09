@@ -1,4 +1,4 @@
-import { Post } from "@/components/client/post";
+import { Post } from "@/components/server/post";
 import { notFound } from "next/navigation";
 
 type SinglePostPageProps = { params: { id: string } };

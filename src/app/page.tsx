@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import { useState } from "react";
 export default function Home() {
     const [fetchedData, setFetchedData] = useState<string | null>(null);
@@ -12,6 +13,11 @@ export default function Home() {
             <h1>{`Main page`}</h1>
             <p>{fetchedData}</p>
             <button onClick={fetchHandler}>Fetch data</button>
+            {fetchedData ? (
+                <p>
+                    <Link href={`/posts`}>Go to Posts</Link>
+                </p>
+            ) : null}
         </main>
     );
 }

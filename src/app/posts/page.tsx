@@ -1,4 +1,4 @@
-import { Post } from "@/components/client/post";
+import { Post } from "@/components/server/post";
 export default async function PostPage() {
     const posts = await fetch("https://jsonplaceholder.typicode.com/posts")
         .then(res => res.json() as Promise<PostType[]>)
